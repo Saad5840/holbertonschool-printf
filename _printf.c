@@ -4,7 +4,7 @@
  * _printf - Prints formatted output to stdout
  * @format: Format string containing specifiers
  *
- * Return: Number of characters printed
+ * Return: Number of characters printed (or -1 on error)
  */
 int _printf(const char *format, ...)
 {
@@ -15,16 +15,17 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(args, format);
-
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
 			if (format[i] == '\0')
-				break;
-
-			if (format[i] == 'c')
+			{
+				va_end(args);
+				return (-1);
+			}
+			else if (format[i] == 'c')
 				count += print_char(args);
 			else if (format[i] == 's')
 				count += print_string(args);
@@ -37,9 +38,7 @@ int _printf(const char *format, ...)
 			}
 		}
 		else
-		{
 			count += _putchar(format[i]);
-		}
 		i++;
 	}
 
