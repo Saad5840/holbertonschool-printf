@@ -15,6 +15,7 @@ This project is a custom implementation of the C standard library function `prin
 Compile your project using the following command:
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o _printf
+```
 
 ## Files Included
 - `main.h`: Header file containing prototypes and necessary includes.
