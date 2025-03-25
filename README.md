@@ -1,59 +1,33 @@
 # Custom _printf Function
+
 ## Description
-This project is a simplified custom implementation of the standard C library function printf. The function _printf writes formatted output to the standard output stream (stdout), handling specific conversion specifiers.
+This project is a custom implementation of the C standard library function `printf`. The `_printf` function outputs formatted text to the standard output (`stdout`), supporting specific format specifiers.
 
-Conversion Specifiers Supported
-%c: Prints a single character.
+## Supported Format Specifiers
+| Specifier | Description                                 | Example                     |
+|-----------|---------------------------------------------|-----------------------------|
+| `%c`      | Prints a single character.                  | `_printf("%c", 'A');`       |
+| `%s`      | Prints a string. Prints `(null)` if `NULL`. | `_printf("%s", "Hello");`   |
+| `%%`      | Prints the `%` character.                   | `_printf("%%");`            |
+| `%d`, `%i`| Prints integers (signed decimal notation).  | `_printf("%d", 42);`        |
 
-%s: Prints a string of characters. If the input is NULL, (null) is printed.
-
-%%: Prints a literal percent symbol %.
-
-%d, %i: Prints integers (signed decimal format).
-
-Compilation
-Use the following command to compile your files:
-
-bash
-Copy
-Edit
+## Compilation
+Compile your project using the following command:
+```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o _printf
-Example Usage
-c
-Copy
-Edit
-#include "main.h"
 
-int main(void)
-{
-    _printf("Hello %s, your score is %d%%\n", "Alice", 85);
-    return (0);
-}
-Output:
-csharp
-Copy
-Edit
-Hello Alice, your score is 85%
-Files Included
-main.h: Contains all function prototypes and necessary includes.
+## Files Included
+- `main.h`: Header file containing prototypes and necessary includes.
+- `_printf.c`: Main implementation of the `_printf` function.
+- `functions.c`: Helper functions handling `%c`, `%s`, and `%%`.
+- `print_numbers.c`: Helper function for handling `%d` and `%i`.
+- `man_3_printf`: Manual page describing the usage of `_printf`.
 
-_printf.c: Main implementation of the _printf function.
+## Viewing the Man Page
+To view the manual page for `_printf`, use the following command:
 
-functions.c: Helper functions handling %c, %s, and %%.
-
-print_numbers.c: Helper function handling %d and %i.
-
-man_3_printf: Manual page describing the _printf function.
-
-Man Page
-To read the provided man page, use:
-
-bash
-Copy
-Edit
+```bash
 man ./man_3_printf
-Author
-[Saad Alarifi] – Holberton School
 
-License
-This project is part of the Holberton School curriculum. All rights reserved.
+## Author
+Saad Alarifi
