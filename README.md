@@ -29,5 +29,10 @@ To view the manual page for `_printf`, use the following command:
 ```bash
 man ./man_3_printf
 
+
 ## Author
-Saad Alarifi
+[Saad Alarifi] – Holberton School
+
+## License
+This project is part of the Holberton School curriculum. All rights reserved.
+
