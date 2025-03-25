@@ -23,12 +23,6 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o _printf
 - `print_numbers.c`: Helper function for handling `%d` and `%i`.
 - `man_3_printf`: Manual page describing the usage of `_printf`.
 
-## Viewing the Man Page
-To view the manual page for `_printf`, use the following command:
-
-```bash
-man ./man_3_printf
-
 
 ## Author
 [Saad Alarifi] – Holberton School
