@@ -1,5 +1,5 @@
-Custom _printf Function
-Description
+# Custom _printf Function
+## Description
 This project is a simplified custom implementation of the standard C library function printf. The function _printf writes formatted output to the standard output stream (stdout), handling specific conversion specifiers.
 
 Conversion Specifiers Supported
